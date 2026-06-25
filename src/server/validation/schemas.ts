@@ -4,7 +4,6 @@
 import { z } from "zod";
 import {
   BUSINESS_TYPES,
-  LAGOS_MARKETS,
   STUDY_AREA_LGAS,
 } from "@/server/lib/constants";
 
@@ -91,14 +90,6 @@ export const ratingSchema = z.object({
   reviewText: z.string().max(1000).optional().or(z.literal("")),
 });
 
-export const marketPriceSchema = z.object({
-  commodityName: z.string().min(2).max(150),
-  marketName: z.enum(LAGOS_MARKETS),
-  pricePerKgLow: z.coerce.number().positive(),
-  pricePerKgHigh: z.coerce.number().positive(),
-  recordedDate: z.string().min(1, "Choose a date"),
-  dataSource: z.string().max(200).optional().or(z.literal("")),
-});
 
 export const resetRequestSchema = z.object({
   email: z.string().email().max(150),

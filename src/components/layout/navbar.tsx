@@ -56,8 +56,6 @@ export default async function Navbar() {
 
         <div style={{ flex: 1 }} />
 
-        <Link href="/prices" className="btn btn-ghost btn-sm">Market Prices</Link>
-
         {!user && (
           <>
             <Link href="/login" className="btn btn-outline btn-sm">Sign in</Link>

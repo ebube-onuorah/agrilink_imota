@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getDb } from "@/server/db";
-import { produceListings, users, marketPrices } from "@/server/db/schema";
+import { produceListings, users } from "@/server/db/schema";
 import { eq, sql } from "drizzle-orm";
 
 export const dynamic = "force-dynamic";
@@ -15,29 +15,27 @@ async function stats() {
     .select({ n: sql<number>`count(*)` })
     .from(produceListings)
     .where(eq(produceListings.listingStatus, "active"));
-  const [prices] = await db.select({ n: sql<number>`count(*)` }).from(marketPrices);
   return {
     farmers: Number(farmers?.n ?? 0),
     listings: Number(listings?.n ?? 0),
-    prices: Number(prices?.n ?? 0),
   };
 }
 
 const FEATURES = [
   {
-    icon: "📈",
-    title: "Live market prices",
-    body: "See current wholesale prices at Mile 12, Oshodi and Badagry markets — so you always know what your produce is really worth.",
-  },
-  {
     icon: "🤝",
     title: "Sell direct to buyers",
-    body: "List your harvest and connect straight to verified buyers, bypassing the chain of middlemen that erodes your margin.",
+    body: "List your harvest and connect straight to verified buyers, cutting out the middlemen that eat into your earnings.",
   },
   {
-    icon: "🛡️",
+    icon: "🔒",
     title: "Trusted transactions",
-    body: "Build a credibility score from buyer ratings. Contact details stay private until a deal is confirmed.",
+    body: "Buyer ratings build your credibility over time. Contact details stay private until a deal is confirmed.",
+  },
+  {
+    icon: "💬",
+    title: "Direct messaging",
+    body: "Negotiate terms and agree on delivery through secure in-platform messaging before anything is committed.",
   },
 ];
 
@@ -111,14 +109,6 @@ export default async function LandingPage() {
           <div>
             <div className="stat-value">{s.listings}</div>
             <div className="stat-label">Active produce listings</div>
-          </div>
-          <div>
-            <div className="stat-value">3</div>
-            <div className="stat-label">Lagos markets tracked</div>
-          </div>
-          <div>
-            <div className="stat-value">{s.prices}</div>
-            <div className="stat-label">Price records</div>
           </div>
         </div>
       </section>

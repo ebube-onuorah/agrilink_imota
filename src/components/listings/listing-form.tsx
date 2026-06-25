@@ -65,8 +65,8 @@ export function ListingForm({
       </div>
 
       <div className="alert alert-info" style={{ padding: "0.8rem 1rem" }}>
-        The listing form is intentionally simple now. Commodity, category, quantity, price, dates, and
-        description are enough to publish a listing. Quality grading is handled internally.
+        Fill in what you have. Commodity, category, quantity and price are enough to go live.
+        Add a description or harvest date to help buyers make a faster decision.
       </div>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>

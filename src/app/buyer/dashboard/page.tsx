@@ -52,14 +52,6 @@ export default async function BuyerDashboard() {
           <div className="stat-value">{stats.completedTransactions}</div>
           <div className="stat-label">Completed purchases</div>
         </div>
-        <div className="stat-card">
-          <Link href="/prices" style={{ textDecoration: "none" }}>
-            <div className="stat-value" style={{ fontSize: "1.1rem", marginTop: "0.4rem" }}>
-              View market prices →
-            </div>
-            <div className="stat-label">Mile 12 · Oshodi · Badagry</div>
-          </Link>
-        </div>
       </div>
 
       <h2 style={{ fontSize: "1.2rem", marginBottom: "1rem" }}>Latest produce near you</h2>
