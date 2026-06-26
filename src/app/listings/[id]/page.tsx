@@ -8,6 +8,7 @@ import { getCredibility } from "@/server/db/queries";
 import { expressInterest } from "@/server/actions/messages";
 import { naira, formatDate } from "@/server/lib/format";
 import { Stars, ListingStatusBadge } from "@/components/ui/badges";
+import { ImageCarousel } from "./image-carousel";
 
 export default async function ListingDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -41,13 +42,8 @@ export default async function ListingDetailPage({ params }: { params: Promise<{ 
 
       <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.3fr) 1fr", gap: "1.5rem", alignItems: "start" }}>
         <div className="card" style={{ padding: 0, overflow: "hidden" }}>
-          <div style={{ height: "16rem", background: "var(--color-brand-50)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            {listing.imageUrls?.[0] ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={listing.imageUrls[0]} alt={listing.commodityName} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-            ) : (
-              <span style={{ fontSize: "4rem" }} aria-hidden>🧺</span>
-            )}
+          <div style={{ height: "16rem", background: "var(--color-brand-50)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+            <ImageCarousel urls={listing.imageUrls ?? []} alt={listing.commodityName} />
           </div>
           <div style={{ padding: "1.5rem" }}>
             <div style={{ display: "flex", gap: "0.5rem", marginBottom: "0.75rem" }}>
