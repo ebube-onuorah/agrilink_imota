@@ -64,7 +64,7 @@ export function PriceChart({ history, commodity }: Props) {
           tickFormatter={(v) => `₦${v}`}
           label={{ value: "₦/kg", angle: -90, position: "insideLeft", offset: 10, fontSize: 11 }}
         />
-        <Tooltip formatter={(v: number) => [`₦${v.toFixed(2)}/kg`, ""]} />
+        <Tooltip formatter={(v) => (typeof v === "number" ? [`₦${v.toFixed(2)}/kg`, ""] : [String(v), ""])} />
         <Legend />
         {markets.map((market, i) => (
           <Line
