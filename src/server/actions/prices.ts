@@ -144,11 +144,10 @@ export async function getAllPricesForAdmin() {
     .orderBy(desc(marketPrices.recordedDate), marketPrices.commodityName, marketPrices.marketName);
 }
 
-export async function deleteMarketPrice(_prev: FormState, formData: FormData): Promise<FormState> {
+export async function deleteMarketPrice(formData: FormData): Promise<void> {
   await requireRole("admin");
   const id = Number(formData.get("id"));
-  if (!id) return { error: "Invalid entry." };
+  if (!id) return;
   const db = await getDb();
   await db.delete(marketPrices).where(eq(marketPrices.id, id));
-  return { success: "Entry deleted." };
 }
