@@ -24,13 +24,6 @@ export default async function PricesPage({ searchParams }: { searchParams: Promi
   const selectedCommodity = sp.commodity ?? commodities[0] ?? "";
   const history = selectedCommodity ? await getPriceHistory(selectedCommodity) : [];
 
-  // Group current month's prices by commodity for the table
-  const grouped: Record<string, typeof prices> = {};
-  for (const row of prices) {
-    if (!grouped[row.commodityName]) grouped[row.commodityName] = [];
-    grouped[row.commodityName].push(row);
-  }
-
   return (
     <div className="container-page" style={{ padding: "2rem 1rem" }}>
       <PageHeader
