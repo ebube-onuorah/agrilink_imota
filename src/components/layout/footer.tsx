@@ -19,7 +19,7 @@ export default function Footer() {
           color: "var(--color-muted)",
         }}
       >
-        <span style={{ fontWeight: 700, color: "var(--color-brand-700)" }}>🌾 FarmLink</span>
+        <span style={{ fontWeight: 700, color: "var(--color-brand-700)" }}>🌾 AgriLink Imota</span>
         <span>Web-based farmer-to-buyer market linkage for the Imota &amp; Ikorodu farming communities, Lagos State.</span>
         <span style={{ flex: 1 }} />
         <span>Caleb University · Final-Year Project</span>

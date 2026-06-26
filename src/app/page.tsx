@@ -77,7 +77,7 @@ export default async function LandingPage() {
               lineHeight: 1.6,
             }}
           >
-            FarmLink connects smallholder farmers directly with agricultural buyers, cutting out
+            AgriLink Imota connects smallholder farmers directly with agricultural buyers, cutting out
             middlemen, reducing post-harvest loss, and putting real market information
             in farmers&rsquo; hands.
           </p>
@@ -188,7 +188,7 @@ export default async function LandingPage() {
             Ready to get a fair price for your harvest?
           </h2>
           <p style={{ color: "var(--color-muted)", margin: "0 0 1.5rem" }}>
-            Join farmers and buyers across the Ikorodu Division already using FarmLink.
+            Join farmers and buyers across the Ikorodu Division already using AgriLink Imota.
           </p>
           <Link href="/register" className="btn btn-primary">Create your free account</Link>
         </div>

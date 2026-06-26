@@ -67,8 +67,8 @@ export async function registerUser(_prev: FormState, formData: FormData): Promis
     const link = appUrl(`/verify-email?token=${verificationToken}`);
     await sendEmail({
       to: email,
-      subject: "Verify your FarmLink account",
-      html: `<p>Welcome to FarmLink, ${fullName}.</p><p>Please verify your email by clicking <a href="${link}">this link</a>.</p>`,
+      subject: "Verify your AgriLink Imota account",
+      html: `<p>Welcome to AgriLink Imota, ${fullName}.</p><p>Please verify your email by clicking <a href="${link}">this link</a>.</p>`,
     });
     return { success: "Account created. Check your email to verify your account before signing in." };
   }
@@ -137,7 +137,7 @@ export async function requestPasswordReset(_prev: FormState, formData: FormData)
     const link = appUrl(`/reset-password?token=${token}`);
     await sendEmail({
       to: user.email,
-      subject: "Reset your FarmLink password",
+      subject: "Reset your AgriLink Imota password",
       html: `<p>Use <a href="${link}">this link</a> to reset your password. It expires in 1 hour.</p><p>If you did not request this, ignore this email.</p>`,
     });
   }

@@ -4,7 +4,7 @@ import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
-  title: "FarmLink - Farmer-to-Buyer Market Linkage",
+  title: "AgriLink Imota - Farmer-to-Buyer Market Linkage",
   description:
     "A web-based platform connecting smallholder farmers in Imota and Ikorodu, Lagos State, directly with agricultural buyers. Reduce post-harvest loss and get fair prices.",
 };

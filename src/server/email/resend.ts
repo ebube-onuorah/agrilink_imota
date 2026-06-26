@@ -8,7 +8,7 @@ type Mail = { to: string; subject: string; html: string };
 
 export async function sendEmail({ to, subject, html }: Mail): Promise<void> {
   const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.EMAIL_FROM ?? "FarmLink <onboarding@resend.dev>";
+  const from = process.env.EMAIL_FROM ?? "AgriLink Imota <onboarding@resend.dev>";
 
   if (!apiKey) {
     console.log(

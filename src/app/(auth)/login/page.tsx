@@ -6,7 +6,7 @@ export default function LoginPage() {
     <div className="card">
       <h1 style={{ fontSize: "1.4rem", margin: "0 0 0.25rem" }}>Welcome back</h1>
       <p style={{ color: "var(--color-muted)", margin: "0 0 1.5rem", fontSize: "0.9rem" }}>
-        Sign in to your FarmLink account.
+        Sign in to your AgriLink Imota account.
       </p>
 
       <LoginForm />

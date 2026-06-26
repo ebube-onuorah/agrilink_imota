@@ -51,13 +51,14 @@ export default async function Navbar() {
           }}
         >
           <span aria-hidden style={{ fontSize: "1.4rem" }}>🌾</span>
-          FarmLink
+          AgriLink Imota
         </Link>
 
         <div style={{ flex: 1 }} />
 
         {!user && (
           <>
+            <Link href="/prices" className="btn btn-ghost btn-sm">Market Prices</Link>
             <Link href="/login" className="btn btn-outline btn-sm">Sign in</Link>
             <Link href="/register" className="btn btn-primary btn-sm">Get started</Link>
           </>
@@ -66,9 +67,12 @@ export default async function Navbar() {
         {user && (
           <>
             {user.userType !== "admin" && (
-              <Link href="/search" className="btn btn-ghost btn-sm">
-                {user.userType === "buyer" ? "Find produce" : "Browse"}
-              </Link>
+              <>
+                <Link href="/prices" className="btn btn-ghost btn-sm">Market Prices</Link>
+                <Link href="/search" className="btn btn-ghost btn-sm">
+                  {user.userType === "buyer" ? "Find produce" : "Browse"}
+                </Link>
+              </>
             )}
             <Link href="/messages" className="btn btn-ghost btn-sm">Messages</Link>
             <Link href="/notifications" className="btn btn-ghost btn-sm" style={{ position: "relative" }}>
