@@ -188,6 +188,10 @@ async function main() {
         harvestDate: daysAgo(1),
         availableFrom: daysAgo(0),
         listingStatus: "active",
+        imageUrls: [
+          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/fresh-waterleaf-1.jpg",
+          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/fresh-waterleaf-2.jpg",
+        ],
       },
       {
         farmerId: adaeze.id,
@@ -200,6 +204,10 @@ async function main() {
         harvestDate: daysAgo(1),
         availableFrom: daysAgo(0),
         listingStatus: "active",
+        imageUrls: [
+          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/pumpkin-leaves-ugwu--1.jpg",
+          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/pumpkin-leaves-ugwu--2.jpg",
+        ],
       },
       {
         farmerId: emeka.id,
@@ -212,6 +220,10 @@ async function main() {
         harvestDate: daysAgo(2),
         availableFrom: daysAgo(0),
         listingStatus: "active",
+        imageUrls: [
+          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/rodo-pepper-1.jpg",
+          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/rodo-pepper-2.jpg",
+        ],
       },
       {
         farmerId: emeka.id,
@@ -223,6 +235,10 @@ async function main() {
         harvestDate: daysAgo(3),
         availableFrom: daysAgo(0),
         listingStatus: "active",
+        imageUrls: [
+          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/fresh-cassava-tubers-1.jpg",
+          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/fresh-cassava-tubers-2.jpg",
+        ],
       },
       {
         farmerId: funke.id,
@@ -235,6 +251,10 @@ async function main() {
         harvestDate: daysAgo(0),
         availableFrom: daysAgo(0),
         listingStatus: "active",
+        imageUrls: [
+          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/live-catfish-1.jpg",
+          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/live-catfish-2.jpg",
+        ],
       },
       {
         farmerId: funke.id,
@@ -246,6 +266,10 @@ async function main() {
         harvestDate: daysAgo(2),
         availableFrom: daysAgo(0),
         listingStatus: "active",
+        imageUrls: [
+          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/roma-tomatoes-1.jpg",
+          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/roma-tomatoes-2.jpg",
+        ],
       },
     ])
     .returning();
