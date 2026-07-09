@@ -190,7 +190,6 @@ async function main() {
         listingStatus: "active",
         imageUrls: [
           "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/fresh-waterleaf-1.jpg",
-          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/fresh-waterleaf-2.jpg",
         ],
       },
       {
@@ -205,8 +204,8 @@ async function main() {
         availableFrom: daysAgo(0),
         listingStatus: "active",
         imageUrls: [
-          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/rodo-pepper-1.jpg",
-          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/rodo-pepper-2.jpg",
+          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/rodo-pepper-3.jpg",
+          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/rodo-pepper-4.jpg",
         ],
       },
       {
@@ -237,7 +236,7 @@ async function main() {
         availableFrom: daysAgo(0),
         listingStatus: "active",
         imageUrls: [
-          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/live-catfish-1.jpg",
+          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/catfish-market-1.jpg",
         ],
       },
       {
