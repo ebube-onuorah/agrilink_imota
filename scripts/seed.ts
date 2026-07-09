@@ -194,22 +194,6 @@ async function main() {
         ],
       },
       {
-        farmerId: adaeze.id,
-        categoryId: catId("Fresh Vegetables"),
-        commodityName: "Pumpkin Leaves (Ugwu)",
-        quantityAvailableKg: "80.00",
-        askingPricePerKg: "820.00",
-        qualityGrade: "Grade A",
-        qualityDescription: "Large bundles, no yellowing.",
-        harvestDate: daysAgo(1),
-        availableFrom: daysAgo(0),
-        listingStatus: "active",
-        imageUrls: [
-          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/pumpkin-leaves-ugwu--1.jpg",
-          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/pumpkin-leaves-ugwu--2.jpg",
-        ],
-      },
-      {
         farmerId: emeka.id,
         categoryId: catId("Fresh Vegetables"),
         commodityName: "Rodo Pepper",
@@ -228,16 +212,17 @@ async function main() {
       {
         farmerId: emeka.id,
         categoryId: catId("Root Crops and Tubers"),
-        commodityName: "Fresh Cassava Tubers",
+        commodityName: "Yam Tubers",
         quantityAvailableKg: "500.00",
-        askingPricePerKg: "180.00",
-        qualityGrade: "Grade B",
+        askingPricePerKg: "850.00",
+        qualityGrade: "Grade A",
+        qualityDescription: "Freshly harvested Puna yam tubers, firm and well-cured. Sold per kg or by the tuber.",
         harvestDate: daysAgo(3),
         availableFrom: daysAgo(0),
         listingStatus: "active",
         imageUrls: [
-          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/fresh-cassava-tubers-1.jpg",
-          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/fresh-cassava-tubers-2.jpg",
+          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/yam-tubers-1.jpg",
+          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/yam-tubers-2.jpg",
         ],
       },
       {
@@ -253,7 +238,6 @@ async function main() {
         listingStatus: "active",
         imageUrls: [
           "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/live-catfish-1.jpg",
-          "https://1nhwui9djw92y5u3.public.blob.vercel-storage.com/listings/live-catfish-2.jpg",
         ],
       },
       {
@@ -295,7 +279,7 @@ async function main() {
   ]);
 
   // ── A completed transaction + rating (populates credibility score) ────────
-  const tomatoes = listingRows[5];
+  const tomatoes = listingRows[4];
   const txnRows = await db
     .insert(schema.transactions)
     .values({
